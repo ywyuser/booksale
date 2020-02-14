@@ -1,0 +1,224 @@
+{{extend './_layouts/home.html'}} {{block 'title'}}{{'网上书店'}}{{/block}} {{block 'body'}}
+
+<div id="pagebody">
+    <div id="bleft">
+        <div id="classify">
+            <h3>图书分类</h3>
+            <div>
+                <ul id="ff">
+                    <li><a href="/items/Liter?type=文学">文学</a> </li>
+                    <li><a href="/items/Art?type=艺术">艺术</a></li>
+                    <li><a href="/items/War?type=军事">军事</a></li>
+                    <li><a href="/items/Fiction?type=小说">小说</a></li>
+                    <li><a href="/items/Science?type=科幻">科幻</a></li>
+                    <li><a href="/items/Econ?type=经济">经济</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="hot">
+            <h3>畅销书籍</h3>
+            <ul>
+
+                <li>
+                    <img src="/upload/图片21.png" alt="">
+                    <p class="author">作者：刘慈欣</p>
+                    <p class="brief">简介：作品讲述了地球人类文明和三体文明的信息交流、生死搏杀及两个文明在宇宙中的兴衰历程。其第一部经过刘宇昆翻译后获得了第73届雨果奖最佳长篇小说奖</p>
+                </li>
+                <li>
+                    <img src="/upload/图片23.png" alt="">
+                    <p class="author">作者：未来科幻大师奖组委会</p>
+                    <p class="brief">简介：这本书是2017年未来科幻大师奖获奖作品合集，包括14篇独立的短篇小说，主题包括人工智能、虚拟空间、平行世界、克隆等广受读者欢迎的热门话题，每篇一到三万字不等，故事简约而不简单，通俗而不庸俗。</p>
+                </li>
+                <li>
+                    <img src="/upload/图片1.png" alt="">
+                    <p class="author">作者：矛盾</p>
+                    <p class="brief">简介：是茅盾长篇小说的代表作，其思想和艺术上的辉煌成就，不仅奠定了茅盾在现代文学史上的杰出地位，而且还充分显示了20世纪30年代左翼无产阶级革命文学的实绩，标志着现代文学现实主义长篇小说的成熟。</p>
+                </li>
+                <!-- <li>
+                    <img src="/upload/巴黎圣母院.jpg" alt="">
+                    <p class="author">作者：雨果</p>
+                    <p class="brief">简介：本书也许为中世纪艺术开辟了真正的前景；而对中世纪这一辉煌艺术，至今有些人还不甚了了，更糟糕的是还有人不屑一顾。</p>
+                </li> -->
+
+            </ul>
+        </div>
+    </div>
+    <div id="bmiddle">
+        <div id="banner">
+            <div id="banner_img">
+                <a href="#" target="_blank"><img class="six  active" src="/public/img/2.png" width="1118px" height="287px" alt=""></a>
+                <a href="#" target="_blank"><img class="six " src="/public/img/3.png" width="1118px" height="287px" alt=""></a>
+                <a href="#" target="_blank"><img class="six " src="/public/img/4.png" width="1118px" height="287px" alt=""></a>
+                <a href="#" target="_blank"><img class="six" src="/public/img/5.png" width="1118px" height="287px" alt=""></a>
+                <a href="#" target="_blank"><img class="six " src="/public/img/6.png" width="1118px" height="287px" alt=""></a>
+            </div>
+            <ul style="margin-top:15px;">
+                <li><input class="sixz lactive" type="button" value="1"></li>
+                <li><input class="sixz " type="button" value="2"></li>
+                <li><input class="sixz " type="button" value="3"></li>
+                <li><input class="sixz " type="button" value="4"></li>
+                <li><input class="sixz " type="button" value="5"></li>
+            </ul>
+
+
+        </div>
+
+        <div id="productbox">
+            <div class="shang">
+                <h4>文学精品</h4>
+
+            </div>
+            <ul>
+                {{each Liter}}
+                <li class="bookDisplay">
+
+                    <div>
+                        <a href="/items/Product?id={{$value.id}}"><img width="100px" height="100px" src="/upload/{{$value.path}}" alt=""></a>
+                    </div>
+                    <div>
+                        <div>{{$value.name}}</div>
+                        <div>作者:{{$value.author}}</div>
+
+                    </div>
+                </li>
+                {{/each}}
+
+
+            </ul>
+            <div class="shang">
+                <h4>艺术精品</h4>
+
+            </div>
+            <ul>
+                {{each Art}}
+                <li class="bookDisplay">
+
+                    <div>
+                        <a href="/items/Product?id={{$value.id}}"><img width="100px" height="100px" src="/upload/{{$value.path}}" alt=""></a>
+                    </div>
+                    <div>
+                        <div>{{$value.name}}</div>
+                        <div>作者:{{$value.author}}</div>
+
+                    </div>
+                </li>
+                {{/each}}
+
+
+            </ul>
+            <div class="shang">
+                <h4>军事精品</h4>
+
+            </div>
+            <ul>
+                {{each War}}
+                <li class="bookDisplay">
+
+                    <div>
+                        <a href="/items/Product?id={{$value.id}}"><img width="100px" height="100px" src="/upload/{{$value.path}}" alt=""></a>
+                    </div>
+                    <div>
+                        <div>{{$value.name}}</div>
+                        <div>作者:{{$value.author}}</div>
+
+                    </div>
+                </li>
+                {{/each}}
+
+
+            </ul>
+            <div class="shang">
+                <h4>小说精品</h4>
+
+            </div>
+            <ul>
+                {{each Fiction}}
+                <li class="bookDisplay">
+
+                    <div>
+                        <a href="/items/Product?id={{$value.id}}"><img width="100px" height="100px" src="/upload/{{$value.path}}" alt=""></a>
+                    </div>
+                    <div>
+                        <div>{{$value.name}}</div>
+                        <div>作者:{{$value.author}}</div>
+
+                    </div>
+                </li>
+                {{/each}}
+
+
+            </ul>
+            <div class="shang">
+                <h4>科幻精品</h4>
+
+            </div>
+            <ul>
+                {{each Science}}
+                <li class="bookDisplay">
+
+                    <div>
+                        <a href="/items/Product?id={{$value.id}}"><img width="100px" height="100px" src="/upload/{{$value.path}}" alt=""></a>
+                    </div>
+                    <div>
+                        <div>{{$value.name}}</div>
+                        <div>作者:{{$value.author}}</div>
+
+                    </div>
+                </li>
+                {{/each}}
+
+
+            </ul>
+            <div class="shang">
+                <h4>经济精品</h4>
+
+            </div>
+            <ul>
+                {{each Econ}}
+                <li class="bookDisplay">
+
+                    <div>
+                        <a href="/items/Product?id={{$value.id}}"><img width="100px" height="100px" src="/upload/{{$value.path}}" alt=""></a>
+                    </div>
+                    <div>
+                        <div>{{$value.name}}</div>
+                        <div>作者:{{$value.author}}</div>
+
+                    </div>
+                </li>
+                {{/each}}
+
+
+            </ul>
+
+
+
+
+        </div>
+    </div>
+</div>
+<div class="week">
+
+    <h4>每周推荐</h4>
+
+
+    <ul>
+        {{each Week}}
+        <li class="weekDisplay">
+            <div>
+                <a href="/items/Product?id={{$value.id}}"><img width="100px" height="100px" src="/upload/{{$value.path}}" alt=""></a>
+            </div>
+            <div style="margin-left:80px">
+                <div>{{$value.name}}</div>
+                <div>作者:{{$value.author}}</div>
+
+            </div>
+        </li>
+        {{/each}}
+
+    </ul>
+
+
+</div>
+
+{{/block}}

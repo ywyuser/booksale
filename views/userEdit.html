@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <link rel="stylesheet" href="/public/css/add.css">
+
+</head>
+
+<body>
+    <div id="header">
+        <img src="/public/img/logo.jpg" style="width: 100px;" alt="">
+        <h1>网上书店</h1>
+        <p> <a href="/items/Home"> 退出</a></p>
+    </div>
+    <div class="wrap">
+
+        <p>个人信息</p>
+        <form action='/buts/Useredit/edit' method='post' class='wsh' enctype="multipart/form-data">
+            <input type="hidden" name="id" value="{{Userinfo._id}}">
+            <div class="form-group" style="position: absolute;left:20%;top:150px;">
+                <label for="">昵&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp称：</label>
+                <input type="text" class="form-control" id="" name='nickname' autofocus="autofocus" value="{{Userinfo.nickname}}">
+            </div>
+            <div class="form-group" style="position: absolute;left:20%;top:220px;">
+                <label for="">密&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp码：</label>
+                <input type="text" class="form-control" id="" name='password' placeholder="不能低于6位数" value="{{Userinfo.password}}">
+            </div>
+
+            <div class="form-group" style="position: absolute;left:20%;top:360px;">
+                <label for="">性&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp别：</label>
+                <input type="text" id="" name='gender' class="form-control" placeholder="只限男/女" value="{{Userinfo.gender}}">
+
+            </div>
+
+            <div class="form-group" style="position: absolute;left:20%;top:430px;">
+                <label for="">电&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp话：</label>
+                <input type="text" class="form-control" id="" name='tel' placeholder="请输入常用电话号码" value="{{Userinfo.tel}}">
+            </div>
+            <div class="form-group" style="position: absolute;left:20%;top:500px;">
+                <label for="">地&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp区：</label>
+                <input type="text" class="form-control" id="" name='place' value="{{Userinfo.place}}">
+            </div>
+            <button style="width:120px;height:40px;position: absolute;left:40%;top:570px;border-radius: 2%;" type="submit" class="btn btn-default">保存<tton> 
+        </form>
+
+       
+
+    </div>
+   
+</body>
+
+</html>

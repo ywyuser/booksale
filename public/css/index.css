@@ -1,0 +1,544 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+img ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+input {
+    background: none;
+    outline: none;
+    border: none;
+}
+
+#containter {
+    width: 1310px;
+    margin: 0px auto;
+    font-size: 10px;
+}
+
+#pagetop {
+    min-height: 71px;
+}
+
+.indexinfo {
+    float: left;
+    height: 65px;
+    line-height: 65px;
+}
+
+#small {
+    width: 1310px;
+    height: 50px;
+    background: rgb(242, 242, 242);
+}
+
+.topnav {
+    width: 500px;
+    height: 65px;
+    float: right;
+}
+
+.topnav ul {
+    list-style: none;
+}
+
+.topnav ul li {
+    display: inline-block;
+    width: 100px;
+}
+
+.topnav ul li:last-child {
+    width: 84px;
+}
+
+.topnav ul a {
+    color: black;
+}
+
+.logo {
+    position: absolute;
+    top: 80px;
+    left: 90px;
+}
+
+.find {
+    position: absolute;
+    top: 79px;
+    right: 400px;
+}
+
+#input {
+    width: 400px;
+    height: 30px;
+}
+
+.find input {
+    border: 4px solid red;
+}
+
+.find button {
+    background: none;
+    outline: none;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+#nav1 {
+    border: 1px solid gray;
+}
+
+#nav {
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+
+#nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+#nav ul li {
+    width: 100px;
+    line-height: 36px;
+    font-size: 16px;
+    font-weight: bolder;
+    display: inline-block;
+    text-align: center;
+}
+
+#nav ul li a {
+    color: #fff;
+}
+
+input {
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-left: 10px;
+}
+
+#info {
+    float: right;
+    background-size: 50px 44px;
+    width: 400px;
+    height: 36px;
+}
+
+#footer {
+    min-height: 100px;
+    border: 1px solid #0c6;
+    width: 1310px;
+    clear: both;
+    margin: 0px auto;
+    background: rgb(150, 162, 167);
+}
+
+.bookDisplay {
+    width: 200px;
+    height: 170px;
+    margin: 2px;
+}
+
+.bookDisplay img {
+    width: 100px;
+}
+
+.week {
+    width: 1310px;
+    height: 200px;
+    clear: both;
+    margin: 0px auto;
+}
+
+.week h4 {
+    height: 30px;
+    font-size: 18px;
+    color: rgb(230, 0, 0);
+    line-height: 30px;
+    background: rgb(247, 248, 249);
+}
+
+.week li {
+    float: left;
+}
+
+.weekDisplay {
+    width: 255px;
+    height: 200px;
+    margin: 3px;
+}
+
+.weekDisplay img {
+    margin: 10px;
+    margin-left: 30%;
+}
+
+#bleft {
+    width: 195px;
+    min-height: 630px;
+    /*border:1px solid #6ff;*/
+    float: left;
+}
+
+#classify {
+    margin: 1px auto;
+}
+
+#product {
+    border-left: 1px solid #ff0062;
+    border-right: 1px solid #ff0062;
+    border-bottom: 1px solid #ff0062;
+    margin: 1px auto;
+    position: relative;
+    height: 630px;
+}
+
+#classify h3 {
+    margin: 0;
+    padding: 0;
+    width: 195px;
+    height: 30px;
+    background: rgb(230, 0, 0);
+    line-height: 30px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+}
+
+#ff {
+    /* 分类 */
+    font-size: 20px;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+#ff li {
+    width: 195px;
+    height: 30px;
+    display: block;
+    background: rgb(241, 241, 251);
+    line-height: 30px;
+}
+
+#hot {
+    width: 195px;
+    min-height: 100px;
+}
+
+#hot li {
+    border-bottom: 1px dashed gray;
+    margin-bottom: 25px
+}
+
+.author {
+    font-size: 15px;
+    margin-left: 18px;
+}
+
+.brief {
+    background: rgb(206, 234, 255);
+    font-size: 15px;
+    padding-right: 2px;
+}
+
+#product,
+#hot h3 {
+    width: 195px;
+    height: 30px;
+    background: #ff0062;
+    line-height: 30px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+}
+
+#classify ul li {
+    line-height: 24px;
+    text-indent: 40px;
+    margin-top: 5px;
+}
+
+#product ul li {
+    line-height: 24px;
+    width: 76px;
+    margin-top: 5px;
+    float: left;
+}
+
+#bmiddle {
+    width: 600px;
+    min-height: 600px;
+    /* border:1px solid red ;*/
+    position: relative;
+    float: left;
+}
+
+#banner {
+    position: absolute;
+    top: 0px;
+    width: 584px;
+    height: 280px;
+}
+
+#banner img {
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+}
+
+#banner ul {
+    position: absolute;
+    top: 270px;
+    right: 10px;
+}
+
+#banner ul li {
+    float: left;
+}
+
+.active {
+    z-index: 100;
+}
+
+.lactive {
+    background: rgb(165, 17, 9);
+}
+
+#productbox {
+    width: 1110px;
+    height: 400px;
+    margin-top: 320px;
+    position: relative;
+}
+
+#productbox h4 {
+    background: #ff0062;
+    width: 170px;
+    line-height: 31px;
+    text-align: center;
+    font-size: 14px;
+}
+
+#productbox ul li {
+    display: inline-block;
+}
+
+#productbox ul li div {
+    margin: 2px 2px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.price {
+    color: red;
+    font-weight: bolder;
+}
+
+.shang {
+    background: rgb(247, 248, 249);
+    height: 31px;
+    position: relative;
+}
+
+#fnav {
+    height: 126px;
+}
+
+#fnav ul {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+
+#fnav ul .listnav {
+    display: inline-block;
+    width: 100px;
+    margin-right: 130px;
+}
+
+#fnav ul li a {
+    color: #333;
+}
+
+#fnav ul .listnav:nth-child(1) {
+    margin-left: 100px;
+}
+
+#fnav ul .listnav ul li {
+    margin: 3px;
+}
+
+.info {
+    position: absolute;
+    top: 336px;
+    background: rgb(240, 240, 240);
+    width: 1120px;
+    height: 400px;
+}
+
+.info ul {
+    position: absolute;
+    top: 30px;
+    left: 35%;
+    font-size: 20px;
+}
+
+.info li {
+    margin: 20px;
+}
+
+.info button {
+    width: 100px;
+    outline: none;
+    border: none;
+    height: 30px;
+    background: red;
+    border-radius: 5%;
+}
+
+.editor {
+    border-top: 2px solid gray;
+    width: 1120px;
+    height: 200px;
+    position: absolute;
+    top: 320px;
+    position: relative;
+}
+
+.editor li {
+    float: left;
+}
+
+.editor img {
+    width: 100px;
+}
+
+#bb {
+    background: red;
+    position: absolute;
+    top: 15px;
+    left: 50px;
+    width: 120px;
+    height: 30px;
+    float: left;
+    border-radius: 22%;
+}
+
+#dis {
+    margin-top: 60px;
+}
+
+.change {
+    border: 1px solid gray;
+    width: 273px;
+    height: 200px;
+    margin: 2px;
+    position: relative;
+}
+
+.change img {
+    margin-top: 50px;
+}
+
+.bookInfo {
+    width: 160px;
+    height: 200px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 12px;
+}
+
+.bookinfo p {
+    margin: 10px;
+}
+
+.bookInfo button {
+    background: red;
+    width: 50px;
+    height: 20px;
+    position: absolute;
+}
+
+
+/* bookShow.css */
+
+.pic {
+    width: 300px;
+    height: 300px;
+    border: 1px solid rgb(193, 193, 193);
+}
+
+#proinfolist {
+    width: 804px;
+    height: 300px;
+    position: absolute;
+    top: 33px;
+    right: 0;
+    border: 1px solid #e1e1e1;
+}
+
+#proinfolist div {
+    margin: 20px;
+    font-size: 18px;
+    margin-left: 250px;
+}
+
+#suc1 {
+    width: 84px;
+    height: 25px;
+    background: yellow;
+    display: none;
+    position: absolute;
+    top: 205px;
+    right: 450px;
+    font-size: 13px;
+    text-align: center;
+}
+
+#suc2 {
+    width: 105px;
+    height: 25px;
+    background: yellow;
+    display: none;
+    position: absolute;
+    top: 205px;
+    right: 280px;
+    font-size: 13px;
+    text-align: center;
+}
+
+
+/* shopCar */
+
+.gouwulist {
+    width: 95%;
+    background: rgb(255, 251, 240);
+}
+
+.gouwulist th {
+    background: #999;
+    line-height: 29px;
+}
+
+.gouwulist td {
+    text-align: center;
+    border-bottom: 1px dashed gray;
+}
+
+.gouwudiv {
+    text-align: right;
+    line-height: 26px;
+}

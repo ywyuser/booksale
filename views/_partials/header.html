@@ -1,0 +1,71 @@
+<div>
+    <div id="pagetop">
+
+        <div id="small">
+            <div class="indexinfo">
+                {{ if user }}
+                <span style="font-size:15px;">你好，欢迎光临本网站&nbsp&nbsp&nbsp<span style="color: red">{{user.nickname}}</span> &nbsp&nbsp&nbsp<a href="/out">【安全退出】</a></span>
+                {{ else }}
+                <span style="font-size:15px;">你好，欢迎登陆网上书店！要买书？<a href="/login">请登录</a>&nbsp&nbsp&nbsp新用户？<a href="/register">免费注册</a></span> {{ /if }}
+
+            </div>
+            <div class="topnav" style="position:relative;font-size:15px;">
+                <ul>
+                    <li><a href="#">帮助中心 |</a></li>
+                    <li><a href="#">客户反馈 |</a></li>
+                    <li><a href="#">网站地图 |</a></li>
+                    <li><a href="#">加入收藏 |</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="logo"><img src="/public/img/logo.jpg" height="65px"><img> <span style="font-size: 25px;margin-left:30px;margin-top:20px;">网上书店</span></div>
+        <div class="find">
+            <form action='/Search' method='post' class='wsh'>
+                <input type="text" class="form-control" id="input" name='name' style="height:31px">
+                <button id="Search" type="submit" style="background:red;margin-left:-10px;height:41px;color:aliceblue;width:100px;">搜索<button>
+            </form>   
+    </div>
+    <div>
+        <span></span>
+    </div>
+    <div id="nav" style="clear:both;padding-top:100px;">
+        <div id="nav1" style="background:#666;height:36px;">
+            <ul>
+                <li><a href="/items/Home">网站首页 </a> </li>
+                <li><a href="/items/Shopcar">购物车 </a></li>
+                <li><a href="/items/Borrow">借阅日志</a></li>
+                <li><a href="/items/Order">我的订单 </a></li>
+                <li><a href="/items/Userinfo">个人中心 </a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div></div>
+</div>
+<script>
+        $('#Search').on('submit', function(e) {
+          e.preventDefault()
+          var formData = $(this).serialize()
+        
+          $.ajax({
+              url: '/Search',
+              type: 'post',
+              data: formData,
+              dataType: 'json',
+              success: function(data) {
+                  var err_code = data.err_code
+                  if (err_code === 0) {
+                      // window.alert('注册成功！')
+                      // 服务端重定向针对异步请求无效
+                      window.location.href = '/items/Home'
+                  } else if (err_code === 1) {
+                      window.alert('抱歉，暂无此书')
+                  } else if (err_code === 500) {
+                      window.alert('服务器忙，请稍后重试！')
+                  }
+              }
+          })
+      })
+  </script>
+</div>

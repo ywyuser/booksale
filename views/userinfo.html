@@ -1,0 +1,79 @@
+{{extend './_layouts/home.html'}} {{block 'title'}}{{'网上书店'}}{{/block}} {{block 'body'}}
+<div id="pagebody">
+    <div id="bleft">
+        <div id="classify">
+            <h3>图书分类</h3>
+            <div>
+                <ul id="ff">
+                    <li><a href="/items/Liter?type=文学">文学</a> </li>
+                    <li><a href="/items/Art?type=艺术">艺术</a></li>
+                    <li><a href="/items/War?type=军事">军事</a></li>
+                    <li><a href="/items/Fiction?type=小说">小说</a></li>
+                    <li><a href="/items/Science?type=科幻">科幻</a></li>
+                    <li><a href="/items/Econ?type=经济">经济</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="hot">
+            <h3>畅销书籍</h3>
+            <ul>
+
+                <li>
+                    <img src="/upload/图片21.png" alt="">
+                    <p class="author">作者：刘慈欣</p>
+                    <p class="brief">简介：作品讲述了地球人类文明和三体文明的信息交流、生死搏杀及两个文明在宇宙中的兴衰历程。其第一部经过刘宇昆翻译后获得了第73届雨果奖最佳长篇小说奖</p>
+                </li>
+
+
+            </ul>
+        </div>
+    </div>
+    <div id="bmiddle">
+        <div id="banner">
+            <div id="banner_img">
+                <a href="#" target="_blank"><img class="six  active" src="/public/img/2.png" width="1118px" height="287px" alt=""></a>
+                <a href="#" target="_blank"><img class="six " src="/public/img/3.png" width="1118px" height="287px" alt=""></a>
+                <a href="#" target="_blank"><img class="six " src="/public/img/4.png" width="1118px" height="287px" alt=""></a>
+                <a href="#" target="_blank"><img class="six" src="/public/img/5.png" width="1118px" height="287px" alt=""></a>
+                <a href="#" target="_blank"><img class="six " src="/public/img/6.png" width="1118px" height="287px" alt=""></a>
+            </div>
+            <ul style="margin-top:15px;">
+                <li><input class="sixz lactive" type="button" value="1"></li>
+                <li><input class="sixz " type="button" value="2"></li>
+                <li><input class="sixz " type="button" value="3"></li>
+                <li><input class="sixz " type="button" value="4"></li>
+                <li><input class="sixz " type="button" value="5"></li>
+            </ul>
+
+
+        </div>
+
+        <div class="info">
+
+            <ul>
+                <li>
+                    <p>昵称: {{Userinfo.nickname}}</p>
+                </li>
+                <li>
+                    <p>性别：{{Userinfo.gender}}</p>
+                </li>
+                <li>
+                    <p>电话：{{Userinfo.tel}}</p>
+                </li>
+                <li>
+                    <p>地址：{{Userinfo.place}}</p>
+                </li>
+                <li style="margin-top:70px">
+                    <a href="/buts/Useredit/edit"> <button>修改</button></a>
+                </li>
+            </ul>
+
+        </div>
+
+
+
+    </div>
+
+
+</div>
+{{/block}}

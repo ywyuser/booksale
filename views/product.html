@@ -1,0 +1,109 @@
+{{extend './_layouts/home.html'}} {{block 'title'}}{{'网上书店'}}{{/block}} {{block 'body'}}
+<div id="pagebody">
+    <div id="bleft">
+        <div id="classify">
+            <h3>图书分类</h3>
+            <div>
+                <ul id="ff">
+                    <li><a href="/items/Liter?type=文学">文学</a> </li>
+                    <li><a href="/items/Art?type=艺术">艺术</a></li>
+                    <li><a href="/items/War?type=军事">军事</a></li>
+                    <li><a href="/items/Fiction?type=小说">小说</a></li>
+                    <li><a href="/items/Science?type=科幻">科幻</a></li>
+                    <li><a href="/items/Econ?type=经济">经济</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="hot">
+            <h3>畅销书籍</h3>
+            <ul>
+
+                <li>
+                    <img src="/upload/图片21.png" alt="">
+                    <p class="author">作者：刘慈欣</p>
+                    <p class="brief">简介：作品讲述了地球人类文明和三体文明的信息交流、生死搏杀及两个文明在宇宙中的兴衰历程。其第一部经过刘宇昆翻译后获得了第73届雨果奖最佳长篇小说奖</p>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div id="bmiddle">
+        <div id="banner">
+            <div id="banner_img">
+                <a href="#" target="_blank"><img class="six  active" src="/public/img/2.png" width="1118px" height="287px" alt=""></a>
+                <a href="#" target="_blank"><img class="six " src="/public/img/3.png" width="1118px" height="287px" alt=""></a>
+                <a href="#" target="_blank"><img class="six " src="/public/img/4.png" width="1118px" height="287px" alt=""></a>
+                <a href="#" target="_blank"><img class="six" src="/public/img/5.png" width="1118px" height="287px" alt=""></a>
+                <a href="#" target="_blank"><img class="six " src="/public/img/6.png" width="1118px" height="287px" alt=""></a>
+            </div>
+            <ul style="margin-top:15px;">
+                <li><input class="sixz lactive" type="button" value="1"></li>
+                <li><input class="sixz " type="button" value="2"></li>
+                <li><input class="sixz " type="button" value="3"></li>
+                <li><input class="sixz " type="button" value="4"></li>
+                <li><input class="sixz " type="button" value="5"></li>
+            </ul>
+
+
+        </div>
+
+        <div id="productbox">
+            <div class="shang">
+                <h4>你的位置 》书籍详情</h4>
+                <p style="position: absolute;left:190px;top:-8px;font-size: 15px;"> <a href="/items/Home"> 返回首页面</a></p>
+            </div>
+
+            <div>
+                <div class="pic">
+                    <img src="/upload/{{Product.path}}" width="200px" style="margin:25px;">
+                </div>
+
+            </div>
+            <div id="proinfolist">
+
+                <div><span>书名:{{Product.name}}</span></div>
+                <div><span>作者:{{Product.author}}</span></div>
+                <div><span>类型:{{Product.btype}}</span></div>
+                <div><span>价格:{{Product.price}}</span></div>
+
+                <div>
+                    <a href="/buts/Addcar?id={{Product.id}}"> <button id="btn1" style="position: absolute; right:471px;top:200px;">加入购物车</button></a>
+                </div>
+                <div>
+                    <a href="/buts/Borrow?id={{Product.id}}"> <button id="btn2" style="position: absolute;right:300px;top:200px;width: 105px;height: 24px;">借&nbsp&nbsp&nbsp阅</button></a>
+                </div>
+                <div id="suc1">加入成功</div>
+                <div id="suc2">借阅成功</div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+<div class="week">
+
+    <h4>每周推荐</h4>
+
+
+    <ul>
+        {{each Week}}
+        <li class="weekDisplay">
+            <div>
+                <a href="/items/Product?id={{$value.id}}"><img width="100px" height="100px" src="/upload/{{$value.path}}" alt=""></a>
+            </div>
+            <div style="margin-left:80px">
+                <div>{{$value.name}}</div>
+                <div>作者:{{$value.author}}</div>
+
+            </div>
+        </li>
+        {{/each}}
+
+    </ul>
+
+
+</div>
+{{/block}}
