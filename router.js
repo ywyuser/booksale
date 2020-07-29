@@ -5,7 +5,7 @@ var md5 = require('blueimp-md5')
     //tu
 var multer = require('multer')
 var fs = require('fs')
-var bodyParser = require('body-parser')
+
 var router = express.Router()
     //(必须引入的模块)
 var createFolder = function(folder) {
@@ -42,6 +42,7 @@ router.post('/login', function(req, res) {
     // 3. 发送响应数据
 
     var body = req.body
+
 
     User.findOne({
         nickname: body.nickname,
@@ -81,7 +82,9 @@ router.post('/register', function(req, res) {
     //    判断改用户是否存在
     //    如果已存在，不允许注册
     //    如果不存在，注册新建用户
-    // 3. 发送响应
+    // 3. 发送响应re
+
+    console.log(req.body);
     var body = req.body
     User.findOne({
             nickname: body.nickname
@@ -187,13 +190,13 @@ router.get('/items/:item', function(req, res) {
 
         //res.send(req.params.id)
 
-
+        //console.log("1-1");
         //////le.log(req.params.item)
 
         if (req.params.item == "Home") {
 
             if (req.session.user == null || req.session.user.nickname != "master") {
-
+                // console.log(req.session);
                 var a = []
                 var b = []
                 var c = []
@@ -286,11 +289,31 @@ router.get('/items/:item', function(req, res) {
                                                                     f[i] = items[i]
                                                                 }
 
-                                                                // for (var i = 0; i < g.length; i++) {
 
-                                                                //     g[i].id = JSON.parse(JSON.stringify(g[i].id))
-                                                                // }
                                                                 ////le.log(g)
+                                                                if (!a[0]) {
+                                                                    a = null
+                                                                }
+                                                                if (!b[0]) {
+                                                                    b = null
+                                                                }
+                                                                if (!c[0]) {
+                                                                    c = null
+                                                                }
+                                                                if (!d[0]) {
+                                                                    d = null
+                                                                }
+                                                                if (!e[0]) {
+                                                                    e = null
+                                                                }
+                                                                if (!f[0]) {
+                                                                    f = null
+                                                                }
+                                                                if (!g[0]) {
+                                                                    g = null
+                                                                }
+
+                                                                console.log(c);
                                                                 res.render("type1.html", {
                                                                     user: req.session.user,
                                                                     Liter: a,
@@ -1018,6 +1041,61 @@ router.get('/Deluser', function(req, res) {
         }
         res.redirect('/buts/Deluser/new')
     })
+})
+router.post('/addbook/new', upload.array('logo', 10), function(req, res) {
+
+    var body = req.body
+    console.log(req.body);
+    var a = [];
+    for (var i = 0; i < req.files.length; i++) {
+        a[i] = req.files[i].originalname
+    }
+    console.log(req.file);
+    req.body.path = a[0]
+    console.log(a);
+    console.log(body);
+
+    Book.findOne({
+            name: body.name
+        },
+        function(err, data) {
+            if (err) {
+                return res.status(500).json({
+                    success: false,
+                    message: '服务端错误'
+                })
+            }
+            // ////le.log(data)
+            if (data) {
+                return res.status(200).json({
+                    err_code: 1,
+                    message: 'nickname aleady exists.'
+                })
+
+            }
+
+            // 对密码进行 md5 重复加密
+
+
+            new Book(body).save(function(err, user) {
+                if (err) {
+                    return res.status(500).json({
+                        err_code: 500,
+                        message: 'Internal error.'
+                    })
+                }
+
+                // 注册成功，使用 Session 记录用户的登陆状态
+
+
+                // Express 提供了一个响应方法：json
+                // 该方法接收一个对象作为参数，它会自动帮你把对象转为字符串再发送给浏览器
+
+
+                // 服务端重定向只针对同步请求才有效，异步请求无效
+                res.redirect('/items/Home')
+            })
+        })
 })
 
 module.exports = router
